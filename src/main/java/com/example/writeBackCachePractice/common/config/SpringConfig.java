@@ -14,4 +14,9 @@ public class SpringConfig {
         objectMapper.registerModule(new JavaTimeModule()); //for localDate
         return objectMapper;
     }
+
+    @Bean
+    public TsidGenerator tsidGenerator() {
+        return new TsidGenerator();
+    }
 }
