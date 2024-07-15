@@ -11,7 +11,7 @@ import java.io.Serializable;
 @Getter
 @Setter
 @NoArgsConstructor
-@RedisHash(value = "comment", timeToLive = 900000)
+@RedisHash(value = "comment", timeToLive = 60000)
 public class CommentCache implements Serializable {
 
     private Long id;

@@ -29,7 +29,7 @@ public class InitDB {
 
 
         public void dbInit1() {
-            IntStream.range(0, 300).forEach(
+            IntStream.range(0, 1000).forEach(
                    i -> commentService.saveComment(
                            new CreateCommentRequestDTO(1L, 1L, "this is content!!!", null)
                    )
