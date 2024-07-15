@@ -1,6 +1,5 @@
 package com.example.writeBackCachePractice.comment.entity.entity;
 
-import com.example.writeBackCachePractice.common.entity.BaseTimeEntity;
 import jakarta.persistence.*;
 import lombok.Builder;
 import lombok.Getter;
@@ -12,7 +11,7 @@ import lombok.Setter;
 @Entity
 @Builder
 @NoArgsConstructor
-public class Comment extends BaseTimeEntity {
+public class Comment {
 
     @Id
     @Column(nullable = false)
