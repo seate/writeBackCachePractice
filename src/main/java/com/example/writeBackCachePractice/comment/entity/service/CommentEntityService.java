@@ -34,7 +34,6 @@ public class CommentEntityService {
     public void updateComment(Long id, String content) {
         Comment comment = getComment(id);
         comment.setContent(content);
-        saveComment(comment);
     }
 
     public void deleteComment(Long id) {

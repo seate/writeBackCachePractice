@@ -44,12 +44,10 @@ public class CommentService {
     public void updateComment(Long id, String newContent) {
         try {
             commentCacheService.updateComment(id, newContent);
+            commentEntityService.updateComment(id, newContent);
         } catch (NoSuchElementException e) {
             commentEntityService.updateComment(id, newContent);
-            Comment comment = commentEntityService.getComment(id);
-            comment.setContent(newContent);
-
-            commentCacheService.saveComment(comment);
+            commentCacheService.saveComment(commentEntityService.getComment(id));
         }
     }
 
