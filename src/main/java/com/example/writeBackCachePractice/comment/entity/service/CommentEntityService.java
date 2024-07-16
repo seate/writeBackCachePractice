@@ -7,6 +7,7 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.Set;
 
 @Service
 @RequiredArgsConstructor
@@ -38,5 +39,9 @@ public class CommentEntityService {
 
     public void deleteComment(Long id) {
         commentEntityRepository.deleteById(id);
+    }
+
+    public void deleteComments(Set<String> ids) {
+        commentEntityRepository.deleteAllById(ids);
     }
 }
